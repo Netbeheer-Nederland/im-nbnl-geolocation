@@ -1,22 +1,38 @@
-= NBNL GeoLocation Profile
+= NBNL GeoLocation (GL) Profile
 
+This vocabulary describes the Geographical Location Profile from IEC
+61970-600-2.
 
-
-.Data Product
+.Profile
 [d2,svg,theme=4]
 ----
-grid-rows: 5
-grid-columns: 5
-
-horizontal-gap: 160
-vertical-gap: 80
-
 vars: {
   d2-config: {
+    layout-engine: elk
     pad: 20
   }
 }
 
+classes: {
+  grid: {
+    style: {
+      fill: "#eccfcb"
+      shadow: true
+    }
+  }
+  enterprise: {
+    style: {
+      fill: "#d1e7c2"
+      shadow: true
+    }
+  }
+  market: {
+    style: {
+      fill: "#fffbef"
+      shadow: true
+    }
+  }
+}
 
 legend: "" {
   style: {
@@ -65,41 +81,25 @@ legend: "" {
   }
 }
 
-classes: {
-  empty: {
-    label: ""
-    style: {
-      fill: transparent
-      stroke: transparent
-    }
-  }
-  grid: {
-    style: {
-      fill: "#eccfcb"
-      shadow: true
-    }
-  }
-  enterprise: {
-    style: {
-      fill: "#d1e7c2"
-      shadow: true
-    }
-  }
-  market: {
-    style: {
-      fill: "#fffbef"
-      shadow: true
-    }
-  }
-  dataset: {
-    style: {
-      shadow: true
-    }
-  }
-}
+direction: down
+
+CoordinateSystem.class: grid
+Location.class: grid
+PositionPoint.class: grid
+PowerSystemResource.class: grid
+StreetAddress.class: grid
+StreetDetail.class: grid
+TownDetail.class: grid
+
+Location -- StreetAddress
+Location -- PowerSystemResource
+Location -- CoordinateSystem
+Location -- PositionPoint
+StreetAddress -- StreetDetail
+StreetAddress -- TownDetail
 ----
 
-== Additional artifacts
-
-* xref:schema:attachment$schemas/json_schema/im_nbnl_geolocation.json_schema.json[JSON schema]
-* xref:schema:attachment$examples/im_nbnl_geolocation.example.json[Example JSON instance data]
+The *GeoLocation Profile* in IEC 61970-600-2 defines the standards for
+representing and exchanging geographic data related to power system assets,
+specifying how locations, coordinates, and spatial relationships should be
+modelled to support system planning, operation, and analysis.
