@@ -1,0 +1,6 @@
+name: im-nbnl-geolocation
+version: v0.draft
+title: NBNL GeoLocation Profile
+nav:
+- modules/ROOT/nav.adoc
+- modules/schema/nav.adoc

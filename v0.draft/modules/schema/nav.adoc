@@ -1,0 +1,35 @@
+[.truncate]
+* Information model
+** xref::index.adoc[Index]
+** Classes
+*** xref::class/IdentifiedObject.adoc[IdentifiedObject (root)]
+
+*** xref::class/CoordinateSystem.adoc[CoordinateSystem]
+
+
+
+
+*** xref::class/Location.adoc[Location]
+
+
+
+*** xref::class/PositionPoint.adoc[PositionPoint]
+
+
+
+*** xref::class/PowerSystemResource.adoc[PowerSystemResource]
+
+
+
+*** xref::class/StreetAddress.adoc[StreetAddress]
+
+
+
+*** xref::class/StreetDetail.adoc[StreetDetail]
+
+
+
+*** xref::class/TownDetail.adoc[TownDetail]
+
+
+

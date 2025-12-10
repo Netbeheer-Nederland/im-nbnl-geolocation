@@ -1,0 +1,44 @@
+= Index
+
+== Classes
+
+[cols="1,2"]
+|===
+| Name | Description
+
+
+| xref::class/CoordinateSystem.adoc[`CoordinateSystem`]
+| +++Coordinate reference system.+++
+
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+| +++This is a root class to provide common identification for all classes needing identification and naming attributes.+++
+
+| xref::class/Location.adoc[`Location`]
+| +++The place, scene, or point of something where someone or something has been, is, and/or will be at a given moment in time. It can be defined with one or more position points (coordinates) in a given coordinate system.+++
+
+| xref::class/PositionPoint.adoc[`PositionPoint`]
+| +++Set of spatial coordinates that determine a point, defined in the coordinate system specified in 'Location.CoordinateSystem'. Use a single position point instance to describe a point-oriented location. Use a sequence of position points to describe a line-oriented object (physical location of non-point oriented objects like cables or lines), or area of an object (like a substation or a geographical zone - in this case, have first and last position point with the same values).+++
+
+| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
+| +++A power system resource (PSR) can be an item of equipment such as a switch, an equipment container containing many individual items of equipment such as a substation, or an organisational entity such as sub-control area. Power system resources can have measurements associated.+++
+
+| xref::class/StreetAddress.adoc[`StreetAddress`]
+| +++General purpose street and postal address information.+++
+
+| xref::class/StreetDetail.adoc[`StreetDetail`]
+| +++Street details, in the context of address.+++
+
+| xref::class/TownDetail.adoc[`TownDetail`]
+| +++Town details, in the context of address.+++
+
+|===
+
+== Types
+
+No types are defined in the schema.
+
+
+== Enumerations
+
+
+No enumerations are defined in the schema.

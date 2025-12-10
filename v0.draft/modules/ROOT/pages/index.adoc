@@ -1,0 +1,105 @@
+= NBNL GeoLocation (GL) Profile
+
+This vocabulary describes the Geographical Location Profile from IEC
+61970-600-2.
+
+.Profile
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    layout-engine: elk
+    pad: 20
+  }
+}
+
+classes: {
+  grid: {
+    style: {
+      fill: "#eccfcb"
+      shadow: true
+    }
+  }
+  enterprise: {
+    style: {
+      fill: "#d1e7c2"
+      shadow: true
+    }
+  }
+  market: {
+    style: {
+      fill: "#fffbef"
+      shadow: true
+    }
+  }
+}
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+
+direction: down
+
+CoordinateSystem.class: grid
+Location.class: grid
+PositionPoint.class: grid
+PowerSystemResource.class: grid
+StreetAddress.class: grid
+StreetDetail.class: grid
+TownDetail.class: grid
+
+Location -- StreetAddress
+Location -- PowerSystemResource
+Location -- CoordinateSystem
+Location -- PositionPoint
+StreetAddress -- StreetDetail
+StreetAddress -- TownDetail
+----
+
+The *GeoLocation Profile* in IEC 61970-600-2 defines the standards for
+representing and exchanging geographic data related to power system assets,
+specifying how locations, coordinates, and spatial relationships should be
+modelled to support system planning, operation, and analysis.

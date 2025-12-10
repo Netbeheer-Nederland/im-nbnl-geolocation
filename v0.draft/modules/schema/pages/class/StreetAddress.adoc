@@ -1,0 +1,279 @@
+= `StreetAddress`
+:toclevels: 4
+
+
++++General purpose street and postal address information.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:StreetAddress`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`StreetAddress`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+StreetAddress {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+StreetDetail {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+TownDetail {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+
+StreetAddress -> StreetDetail: streetDetail
+
+
+StreetAddress -> TownDetail: townDetail
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="1,1,2,1",width=100%]
+|===
+| Name | Type | Description | Inherited from
+
+| <<poBox,`poBox`>>
+//| [[slots_table.poBox]]<<poBox,`poBox`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Post office box.+++
+| _n/a_
+
+| <<postalCode,`postalCode`>>
+//| [[slots_table.postalCode]]<<postalCode,`postalCode`>>
+| 0..1 +
+https://w3id.org/linkml/String[`string`]
+| +++Postal code for the address.+++
+| _n/a_
+
+| <<streetDetail,`streetDetail`>>
+//| [[slots_table.streetDetail]]<<streetDetail,`streetDetail`>>
+| 0..1 +
+xref::class/StreetDetail.adoc[`StreetDetail`]
+| +++Street detail.+++
+| _n/a_
+
+| <<townDetail,`townDetail`>>
+//| [[slots_table.townDetail]]<<townDetail,`townDetail`>>
+| 0..1 +
+xref::class/TownDetail.adoc[`TownDetail`]
+| +++Town detail.+++
+| _n/a_
+|===
+
+'''
+
+
+//[discrete]
+[#poBox]
+=== `poBox`
++++Post office box.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:StreetAddress.poBox`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.poBox,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#postalCode]
+=== `postalCode`
++++Postal code for the address.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:StreetAddress.postalCode`
+| Cardinality
+| 0..1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.postalCode,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#streetDetail]
+=== `streetDetail`
++++Street detail.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:StreetAddress.streetDetail`
+| Cardinality
+| 0..1
+| Type
+| xref::class/StreetDetail.adoc[`StreetDetail`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.streetDetail,&#10548;>>
+--
+////
+
+
+//[discrete]
+[#townDetail]
+=== `townDetail`
++++Town detail.+++
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:StreetAddress.townDetail`
+| Cardinality
+| 0..1
+| Type
+| xref::class/TownDetail.adoc[`TownDetail`]
+
+
+|===
+
+////
+[.text-left]
+--
+<<slots_table.townDetail,&#10548;>>
+--
+////
+
+
+
+
+
+== Used by
+
+
+[cols="1,1",width=65%]
+|===
+| Source class | Slot name
+
+
+
+| xref::class/Location.adoc[`Location`] | xref::class/Location.adoc#secondaryAddress[`secondaryAddress`]
+
+
+|===
+
