@@ -1,0 +1,5 @@
+name: im-nbnl-geolocation
+title: NBNL GeoLocation Profile
+version: true
+nav:
+- modules/ROOT/nav.adoc
